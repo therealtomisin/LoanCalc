@@ -2,7 +2,7 @@
 // Game Values
 let min = 1,
     max = 10,
-    randomNumber = 2,
+    randomNumber = getRandomNum(min, max),
     trialsLeft = 3;
 
 //UI Elements
@@ -73,7 +73,8 @@ gameOver = (won, msg) => {
     guessBtn.value = 'Play Again'
     guessBtn.className = 'play-again'
 }
-// playAgain=()=>{
-//     trialsLeft = 3
-//     guessBtn.className[1] = ''
-// }
+
+//Get Random Number 
+function getRandomNum(min, max){
+    console.log(Math.floor(Math.random()*max-min+1)+min)
+}
